@@ -1,0 +1,112 @@
+.post {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  padding: 0 1em 0.7em;
+  border-radius: 5px;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.votes {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+  background-color: hsl(223, 19%, 93%);
+  justify-content: space-between;
+  padding: 0.8em;
+  border-radius: 10px;
+  height: 12vh;
+}
+.votes img {
+  cursor: pointer;
+}
+.voteNum {
+  text-align: center;
+}
+.leftSide,
+.rightSide,
+.top {
+  display: flex;
+  align-items: center;
+}
+.top {
+  justify-content: space-between;
+  padding: 0;
+}
+.leftSide {
+  align-items: center;
+  padding: 0;
+  user-select: none;
+}
+.rightSide {
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+}
+.reply {
+  height: 24px;
+  width: 24px;
+  align-self: center;
+  user-select: none;
+}
+.image {
+  transform: scale(0.5);
+  margin-left: -15px;
+}
+.period {
+  color: hsl(211, 10%, 45%);
+  font-weight: 400;
+  padding: 0;
+}
+.reply {
+  scale: 0.6;
+}
+.user,
+.period {
+  scale: 0.8;
+  padding: 0;
+}
+.rep {
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.body {
+  max-width: 95%;
+  margin: 0;
+  padding: 0;
+}
+.tag {
+  color: hsl(238, 40%, 52%);
+  margin-right: 3px;
+  font-weight: 500;
+}
+.minus {
+  width: 16px;
+  height: 8px;
+  user-select: none;
+}
+.plus {
+  width: 16px;
+  height: 16px;
+  user-select: none;
+}
+@media (max-width: 500px) {
+  .post {
+    display: grid;
+    position: relative;
+  }
+  .votes {
+    grid-row: 2;
+    flex-direction: row;
+    width: 30%;
+    height: 3vh;
+    align-items: center;
+  }
+  .rightSide {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,11 @@
+.replyBox {
+  border-left: 1px solid hsla(211, 10%, 45%, 0.253);
+  padding-left: 3em;
+  margin-left: 3em;
+}
+@media (max-width: 500px) {
+  .replyBox {
+    padding-left: 0.7em;
+    margin-left: 0.5em;
+  }
+}

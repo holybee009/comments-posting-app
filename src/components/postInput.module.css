@@ -1,0 +1,47 @@
+.inputBox {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  gap: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 56.5vw;
+}
+.input {
+  width: 100%;
+  padding: 7px;
+}
+.image {
+  transform: scale(0.5);
+  margin-top: -15px;
+  align-self: self-start;
+}
+.send {
+  background-color: hsl(238, 40%, 52%);
+  color: hsl(0, 0%, 100%);
+  align-self: self-start;
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+@media (max-width: 500px) {
+  .inputBox {
+    width: 85vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    max-height: 100px;
+    padding-bottom: 0;
+  }
+  .input {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .send {
+    max-width: 50px;
+    justify-self: end;
+  }
+}

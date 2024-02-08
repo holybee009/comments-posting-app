@@ -1,0 +1,59 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal {
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 3%;
+  overflow: hidden;
+  max-width: 50%;
+  transform: translateY(-20%);
+  z-index: 99;
+}
+.confirmation {
+  display: flex;
+  justify-content: space-between;
+}
+.cancel {
+  background-color: hsl(211, 10%, 45%);
+}
+.delete {
+  background-color: hsl(358, 79%, 66%);
+}
+.head {
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
+}
+.delete,
+.cancel {
+  color: hsl(0, 0%, 100%);
+  width: 40%;
+  text-align: center;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .delete,
+  .cancel {
+    font-size: 14px;
+    padding: 0.5em;
+  }
+  .head {
+    font-size: 32px;
+  }
+  .modal {
+    max-width: 80%;
+    transform: translateY(25%);
+  }
+}
