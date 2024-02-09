@@ -147,7 +147,7 @@ function App() {
     } else if (userRes === "") {
       const commentData = {
         id: newId,
-        content: postContent(),
+        content: inputWord,
         createdAt: timeAgo,
         score: 0,
         user: data.currentUser,
