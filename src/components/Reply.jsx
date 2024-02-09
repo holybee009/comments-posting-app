@@ -1,4 +1,4 @@
-import reply from "./../../images/icon-reply.svg";
+import repl from "./../../images/icon-reply.svg";
 import classes from "./reply.module.css";
 import minus from "./../../images/icon-minus.svg";
 import plus from "./../../images/icon-plus.svg";
@@ -29,7 +29,7 @@ function Reply({
             <h3 className={classes.period}>{userPeriod}</h3>
           </div>
           <div className={classes.rightSide} onClick={newReply}>
-            <img src={reply} alt="reply" className={classes.reply} />
+            <img src={repl} alt="reply" className={classes.reply} />
             <p className={classes.rep}>reply</p>
           </div>
         </div>

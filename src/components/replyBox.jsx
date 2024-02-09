@@ -1,8 +1,8 @@
-import Reply from "./Reply";
 import classes from "./replyBox.module.css";
 import UserReply from "./userReply";
 import { useEffect, useState } from "react";
 import ReplyModal from "./replyModal";
+import Reply from "./reply";
 
 function ReplyBox({
   repl,
