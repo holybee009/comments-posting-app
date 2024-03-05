@@ -1,5 +1,5 @@
 import PostFolder from "./postFolder";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Postlist({
   replying,
@@ -18,13 +18,14 @@ function Postlist({
     return scores.score;
   });
   const [scoreValue, setScoreValue] = useState(comScores);
-
   const [clickable, setClickable] = useState(false);
 
   const clickableIcon = (val) => {
     setClickable(val);
   };
-
+  useEffect(() => {
+    setScoreValue(comScores);
+  }, [comScores.length !== scoreValue.length]);
   const handleVoteIncrease = (fieldName) => {
     const arrPosition = fieldName - 1;
     const newArray = [...scoreValue];
@@ -50,8 +51,8 @@ function Postlist({
           userPerio={postSection.createdAt}
           userCommen={postSection.content}
           replyy={postSection.replies}
-          addVot={() => handleVoteIncrease(postSection.id)}
-          lessVot={() => handleVotedecrease(postSection.id)}
+          addVot={() => handleVoteIncrease(i + 1)}
+          lessVot={() => handleVotedecrease(i + 1)}
           datas={JSONData}
           array={Jdata}
           index={i}

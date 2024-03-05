@@ -180,18 +180,17 @@ function App() {
     id === 0 &&
       setReplies(
         replies.filter((_, ind) => {
-          ind !== val;
+          return ind !== val;
         })
       );
     id === 1 &&
       setSecReplies(
         secondReply.filter((_, ind) => {
-          ind !== val;
+          return ind !== val;
         })
       );
     handleCloseBox();
   };
-
   return (
     <>
       <Postlist
